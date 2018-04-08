@@ -14,3 +14,6 @@ foreach ($backup in $backups) {
         del $full_path
     }
 }
+
+$fileName = "%backup_file%$day"
+.\tc_backup.ps1 -user %tc_user% -pass %tc_pass% -fileName $fileName -addTimestamp $false
